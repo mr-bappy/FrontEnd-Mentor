@@ -1,0 +1,98 @@
+.attribution { font-size: 14px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* colors */
+:root {
+    --yellow: rgb(203, 236, 39);
+    --buttonBlack: rgb(74, 73, 73); 
+    --containerBlack: rgb(47, 46, 46);
+}
+
+/* setting font */
+@font-face{
+    font-family: commonFont;
+    src: url(./assets/fonts/static/Inter-Regular.ttf);
+}
+
+/* setting all elements  */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: commonFont;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+/* body style */
+body{
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* border: 1px solid red; */
+}
+
+.container{
+    max-width: 350px;
+    background-color: var(--containerBlack);
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    gap: 1pc;
+}
+
+.profileImage img{
+    border-radius: 50%;
+    width: 6pc;
+}
+
+.userInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.userInfo h3{
+    font-size: 19px;
+}
+
+.userInfo p{
+    color: var(--yellow);
+    font-weight: 600;
+}
+
+.userProfession p{
+    font-size: 13px;
+}
+
+.socialLinks{
+    width: 100%;
+}
+
+.socialLinks div{
+    padding: 10px 0px;
+    background-color: var(--buttonBlack);
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.socialLinks a{
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.socialLinks a div:hover{
+    background-color: var(--yellow);
+    color: black;
+}
