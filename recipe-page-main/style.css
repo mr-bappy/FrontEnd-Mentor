@@ -30,9 +30,10 @@ body::-webkit-scrollbar{
     display: none;
 }
 
+/* container styling */
 .container{
     background-color: white;
-    max-width: 60pc;
+    max-width: 40pc;
     margin: 100px auto;
     border-radius: 2pc;
     display: flex;
@@ -43,22 +44,11 @@ body::-webkit-scrollbar{
 }
 
 .container img{
-    max-width: 60pc;
+    max-width: 40pc;
     border-radius: 2pc;
 }
 
-h1{
-    font-family: headFont;
-    font-weight: lighter;
-    font-size: 2.2pc;
-    color: black;
-}
-
-.mainHeading {
-    font-size: 3.5pc;
-    margin: 1pc auto;
-}
-
+/* other styling */
 .prepareRecipe, .ingredientsRecipe, .instructionRecipe, .nutritionRecipe{
     width: 100%;
 }
@@ -77,10 +67,29 @@ h1{
     margin: 2pc;
 }
 
+
+/* heading styling */
+.ingredientsRecipe h1, .instructionRecipe h1, .nutritionRecipe h1{
+    color: rgb(116, 75, 35);
+}
+
 h2{
     color: rgb(115, 14, 93);
 }
 
+h1{
+    font-family: headFont;
+    font-weight: lighter;
+    font-size: 1.5pc;
+    color: black;
+}
+
+.mainHeading {
+    font-size: 2.5pc;
+    margin: 1pc auto;
+}
+
+/* li styling */
 li{
     margin-bottom: 1pc;
 }
@@ -91,10 +100,6 @@ li:last-child{
 
 li .boldText {
     color: rgb(74, 74, 74);
-}
-
-.ingredientsRecipe h1, .instructionRecipe h1, .nutritionRecipe h1{
-    color: rgb(116, 75, 35);
 }
 
 .ingredientsRecipe li, span{
@@ -119,6 +124,7 @@ li .boldText {
     color: rgb(116, 75, 35);
 }
 
+/* table styling */
 table{
     /* border: 1px solid red; */
     width: 100%;
@@ -137,6 +143,7 @@ tr:last-child td{
     border:  none;
 }
 
+/* responsive styling */
 @media all and (max-width:800px) and (min-width:200px){
 
     /* *{
