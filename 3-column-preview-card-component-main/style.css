@@ -1,0 +1,140 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* setting colors */
+:root{
+    --brightOrange: hsl(31, 77%, 52%);
+    --darkCyan: hsl(184, 100%, 22%);
+    --veryDarkCyan: hsl(179, 100%, 13%);
+    --transparentWhite: hsla(0, 0%, 100%, 0.75);
+    --veryLightGray: hsl(0, 0%, 95%);
+}
+
+/* setting all elements */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+/* container styling */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--veryLightGray);
+}
+
+.main-container{
+    display: flex;
+    width: 1050px;
+    border-radius: 10px;
+    /* border: 1px solid red; */
+}
+
+.child-container{
+    /* border: 1px solid red; */
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.child-container:nth-child(1){
+    background-color: var(--brightOrange);
+    border-radius: 10px 0px 0px 10px;
+}
+.child-container:nth-child(2){
+    background-color: var(--darkCyan);  
+}
+.child-container:nth-child(3){
+    background-color: var(--veryDarkCyan);
+    border-radius: 0px 10px 10px 0px;
+}
+
+h1{
+    font-family: "Big Shoulders", sans-serif;
+    color: var(--veryLightGray);
+    text-transform: uppercase;
+}
+
+p{
+    font-family: "Lexend Deca", sans-serif;
+    color: var(--transparentWhite);
+    width: 230px;
+}
+
+button{
+    background-color: var(--veryLightGray);
+    border: 2px solid var(--veryLightGray);
+    outline: none;
+    padding: 12px 24px;
+    border-radius: 24px;
+    font-size: 15px;
+    font-family: "Lexend Deca", sans-serif;
+    cursor: pointer;
+}
+
+.child-container:nth-child(1) button{
+    color: var(--brightOrange);
+}
+.child-container:nth-child(2) button{
+    color: var(--darkCyan);
+}
+.child-container:nth-child(3) button{
+    color: var(--veryDarkCyan);
+}
+
+.child-container:nth-child(1) button:hover{
+    border: 2px solid var(--veryLightGray);
+    background-color: var(--brightOrange);
+    color: white;
+}
+.child-container:nth-child(2) button:hover{
+    border: 2px solid var(--veryLightGray);
+    background-color: var(--darkCyan);
+    color: white;
+}
+.child-container:nth-child(3) button:hover{
+    border: 2px solid var(--veryLightGray);
+    background-color: var(--veryDarkCyan);
+    color: white;
+}
+
+/* responsive styling */
+@media all and (min-width: 200px) and (max-width:800px) {
+
+    .container{
+        height: fit-content;
+        padding: 30px 10px;
+    }
+    .main-container{
+        flex-direction: column;
+        width: 300px;
+    }
+
+    .child-container{
+        border-radius: none;
+    }
+
+    .child-container:nth-child(1){
+        background-color: var(--brightOrange);
+        border-radius: 10px 10px 0px 0px;
+    }
+    .child-container:nth-child(2){
+        background-color: var(--darkCyan);  
+    }
+    .child-container:nth-child(3){
+        background-color: var(--veryDarkCyan);
+        border-radius: 0px 0px 10px 10px;
+    }
+
+}
