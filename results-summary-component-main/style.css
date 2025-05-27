@@ -247,6 +247,10 @@ body::-webkit-scrollbar{
         background-color: white;
     }
 
+    .container{
+        background-color: white;
+    }
+
     .main-card-container{
         flex-direction: column;
         justify-content: start;
@@ -255,7 +259,7 @@ body::-webkit-scrollbar{
     }
     .resultCard{
         border-radius: 0px 0px 50px 50px;
-        height: 50%;
+        height: 45%;
         width: 100%;
         /* border: 1px solid red; */
     }
@@ -273,11 +277,12 @@ body::-webkit-scrollbar{
     }
 
     .resultCard .showScore p{
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .resultCard .resultScore{
         width: calc(100% - 50%);
+        height: 400px;
     }
 
     .summaryCard{
@@ -310,7 +315,7 @@ body::-webkit-scrollbar{
     }
 
     .traits p,span{
-    font-size: 11px;
+    font-size: 14px;
     }
 
     /* .traits div img{
