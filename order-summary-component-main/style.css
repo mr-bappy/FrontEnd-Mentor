@@ -1,0 +1,152 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/* setting colors */
+:root{
+    /* primary colors */
+    --PaleBlue: hsl(225, 100%, 94%);
+    --BrightBlue: hsl(245, 75%, 52%);
+
+    /* neutral colors */
+    --VeryPaleBlue: hsl(225, 100%, 98%);
+    --DesaturatedBlue: hsl(224, 23%, 55%);
+    --DarkBlue: hsl(223, 47%, 23%);
+}
+
+/* setting font */
+@font-face {
+    font-family: commonFont ;
+    src: url(./fonts/Red_Hat_Display/RedHatDisplay-VariableFont_wght.ttf);
+}
+
+/* setting all elements */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: commonFont;
+}
+
+/* body styling */
+body{
+    background-color: var(--PaleBlue);
+    /* background-color: black; */
+    background-image: url(./images/pattern-background-desktop.svg);
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* container styling */
+.container{
+    width: 350px;
+    /* border: 1px solid red; */
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* container image styling */
+.container .hero{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+/* details styling */
+.details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 40px;
+    gap: 10px;  
+}
+
+.details h2{
+    color: var(--DarkBlue);
+    font-weight: 900;
+}
+
+.details .plan{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-color: var(--VeryPaleBlue);
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.details .plan img{
+    width: 40px;
+    height: 40px;
+}
+
+.details .plan .planChild1{
+    display: flex;
+    gap: 15px;
+}
+
+.greyText{
+    color: var(--DesaturatedBlue);
+}
+
+.desc{
+    text-align: center;
+    font-size: 15px;
+}
+
+.details .plan p{
+    font-size: 13px;
+}
+.details .plan span{
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--DarkBlue);
+}
+
+a{
+    font-size: 13px;
+    color: var(--BrightBlue);
+    font-weight: 700;
+}
+
+.details button{
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.details .proceedBtn{
+    background-color: var(--BrightBlue);
+    padding: 10px 0;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 10px 8px rgba(126, 126, 126, 0.432);
+}
+
+.cancelBtn{
+    background: transparent !important;
+    border-radius: 10px;
+    width: fit-content !important;
+}
+
+/* hover styling */
+.cancelBtn:hover{
+    color: var(--DarkBlue);
+}
+
+.proceedBtn:hover{
+    background-color: hsl(242, 76%, 63%);
+}
+
+a:hover{
+    color: hsl(242, 76%, 63%);
+}
