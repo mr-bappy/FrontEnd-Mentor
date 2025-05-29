@@ -1,0 +1,116 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* setting colors */
+:root{
+    --Yellow: hsl(47, 88%, 63%);
+    --White: hsl(0, 0%, 100%);
+    --Gray500: hsl(0, 0%, 42%);
+    --Gray950: hsl(0, 0%, 7%);
+}
+
+/* setting font */
+@font-face {
+    font-family: figtree;
+    src: url(./assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+
+/* setting all element */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: figtree;
+}
+
+/* setting body */
+body{
+    background-color: var(--Yellow);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* container styling */
+.container{
+    background-color: var(--White);
+    width: 320px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 0px black;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* hero image styling */
+.container .heroImage{
+    width: 100%;
+
+    > img {
+    width: 100%;
+    border-radius: 10px;
+    }
+}
+
+
+
+/* details section styling */
+.details{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    > p:nth-child(1){
+        background-color: var(--Yellow);
+        width: fit-content;
+        padding: 5px 10px;
+        font-weight: 700;
+        font-size: 14px;
+        order: 1;
+    }
+
+    > p:nth-child(2){
+        font-size: 13px;
+        font-weight: 500;
+        order: 2;
+    }
+
+    > p:nth-child(3){
+        color: var(--Gray500);
+        order: 4;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    >h3{
+        order: 3;
+    }
+
+    > h3:hover{
+        color: var(--Yellow);
+        transition-property: color;
+        transition-duration: 0.2s;
+        cursor: pointer;
+    }
+}
+
+.userDetails{
+    order: 4;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    > img{
+        width: 12%;
+    }
+
+    > p{
+        font-weight: 700;
+        font-size: 13px;
+    }
+}
