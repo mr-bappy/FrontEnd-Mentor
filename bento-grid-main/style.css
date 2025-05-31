@@ -1,0 +1,378 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* setting colors */
+:root {
+    --Purple100: hsl(254, 88%, 90%);
+    --Purple500: hsl(256, 67%, 59%);
+    --Yellow100: hsl(31, 66%, 93%);
+    --Yellow500: hsl(39, 100%, 71%);
+    --DimWhite: hsl(0, 2%, 91%);
+    --Black: hsl(0, 0%, 7%);
+}
+
+/* setting font */
+@font-face {
+    font-family: DMSans;
+    src: url(./assets/fonts/DMSans-VariableFont_opsz\,wght.ttf);
+}
+@font-face {
+    font-family: commonFont ;
+    src: url(./assets/fonts/static/DMSans-Regular.ttf);
+}
+
+/* setting all elements */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--DMSans, commonFont);
+    font-weight: 500;
+}
+
+/* body styling */
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* height: 100vh; */
+    justify-content: center;
+    align-items: center;
+    background-color: var(--DimWhite);
+}
+
+/* container styling */
+.container{
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    
+    grid-template-areas: 
+    "one"
+    "two"
+    "three"
+    "four"
+    "five"
+    "six"
+    "seven"
+    "eight";
+
+    > div{
+        /* background-color: red; */
+        padding: 20px 15px;
+        border-radius: 10px;
+    }
+
+    > div:nth-child(1){
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-area: one;
+
+        > img{
+            width: 170px;
+            margin-top: 10px;
+        }
+
+        > h1{
+            font-size: 38px;
+            width: 80%;
+            /* border: 1px solid red; */
+            line-height: 40px;
+        }
+
+        @media (width > 800px){
+            justify-content: center;
+            > h1{
+                width: 300px;
+            }
+
+            > img{
+                margin-top: 20px;
+                width: 35%;
+            }
+        }
+    }
+
+    > div:nth-child(2){
+        grid-area: two;
+        
+        > img{
+            width: 100%;
+        }
+
+        @media (width > 800px){
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+           
+            gap: 15px;
+            > img{
+                margin-left: 10px;
+                width: 140%;
+                filter: drop-shadow(0px 0px 5px rgb(149, 149, 149));
+            }
+
+            > p{
+                width: 85%;
+            }
+        }
+    }
+
+    > div:nth-child(3){
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        grid-area: three;
+        > img{
+            width: 63% ;
+            margin-bottom: -43px;
+            margin-top: 5px;
+        }
+
+        @media (width > 800px){
+
+            gap: 20px;
+            >p {
+                width: 100px;
+                /* margin-bottom: 100px; */
+            }
+            > img{
+                width: 100%;
+                margin-bottom: -100px;
+            }
+        }
+    }
+
+    > div:nth-child(4){
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        align-items: center;
+        grid-area: four;
+        > img {
+            width: 100%;
+        }
+
+        >p:last-child {
+            width: 280px;
+        }
+
+        @media (width > 800px){
+            align-items: start;
+            overflow: hidden;
+            > img{
+                width: 150%;
+                margin-left: 22px;
+            }
+
+            > p:first-child{
+                width: 150px;
+                text-align: start;
+            }
+
+            > p:last-child{
+                width: 180px;
+                text-align: start;
+            }
+        }
+    }
+
+    > div:nth-child(5){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        grid-area: five;
+        > img{
+            width: 70%;
+        }
+
+        p{
+            text-align: center;
+            width: 250px;
+        }
+
+        @media (width > 800px){
+            flex-direction: row;
+            > img{
+                width: 40%;
+            }
+
+            > p{
+                text-align: start;
+                width: 200px;
+            }
+        }
+    }
+
+    >div:nth-child(6){
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        grid-area: six;
+        > img {
+            width: 50%;
+        }
+
+        h1{
+            font-weight: bold;
+        }
+
+        @media (width > 800px) {
+            > img{
+                width: 78%;
+            }
+        }
+    }
+
+    >div:nth-child(7){
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        grid-area: seven;
+        > p{
+            line-height: 25px;
+        }
+
+        > img{
+            width: 63%;
+        }
+
+        @media (width > 800px){
+            align-items: start;
+            justify-content: center;
+            max-width: fit-content;
+            /* max-width: 00px; */
+            /* border: 1px solid red; */
+
+            > p{
+                width: 150px;
+                line-height: 30px;
+            }
+
+            > img{
+                width: 80%;
+            }
+        }      
+    }
+
+    >div:nth-child(8){
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        grid-area: eight;
+        > p{
+            line-height: 25px;
+            width: 300px;
+        }
+
+        > img{
+            width: 75%;
+        }
+
+        @media (width > 800px){
+            > p{
+                width: 130px;
+            }
+
+            > img{
+                width: 100%;
+            }
+        }
+    }
+
+    @media all and (width > 800px) {
+
+        max-width: 900px;
+        grid-template-columns: repeat(4, 1fr);
+        /* align-items: start; */
+        grid-template-areas:
+        "seven one one four"
+        "seven two three four"
+        "eight two three four"
+        "eight six five five";
+
+        .font-lg{
+            font-size: 23px;
+        }
+        
+        .font-md{
+            font-size: 20px;
+            line-height: 20px;
+        }
+
+        .font-sm{
+            font-size: 13px;
+        }
+    }
+
+    @media (width > 600px) and (width < 800px) {
+        grid-template-areas: 
+        "one one"
+        "two three"
+        "four eight"
+        "seven five"
+        "six five"
+        ;
+    }
+}
+
+img{
+    width: 100px;
+}
+
+/* setting texts */
+.yellowText{
+    color: var(--Yellow500);
+}
+
+.purpleText{
+    color: var(--Purple500);
+}
+
+.italicText{
+    font-style: italic;
+}
+
+/* setting backgrounds */
+.backgroundPurple{
+    background-color: var(--Purple500);
+    color: white;
+}
+
+.backgroundYellow{
+    background-color: var(--Yellow500);
+}
+
+.backgroundWhite{
+    background-color: white;
+}
+
+.backgroundLightYellow{
+    background-color: var(--Yellow100);
+}
+
+.backgroundLightPurple{
+    background-color: var(--Purple100);
+}
+
+/* setting fonts */
+.font-sm{
+    font-size: 17px;
+    display: block;
+    font-weight: 400;
+}
+
+.font-md{
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.font-lg{
+    font-size: 30px;
+    font-weight: 600;
+}
